@@ -1,2 +1,2 @@
 # emoji_generator
-Appending emoji to every sentences of a paragraph.
+按照複製文中的關鍵字，新增表情符號到句尾。
