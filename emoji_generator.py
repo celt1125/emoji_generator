@@ -129,11 +129,11 @@ def generate():
                 for emoji in database[word]:
                     emoji_list.append(emoji)
                     
-        emoji_num = round(np.random.normal(3, 1))
-        if emoji_num > 4:
-            emoji_num = 4
-        elif emoji_num < 2:
-            emoji_num = 2
+        emoji_num = round(np.random.normal(2, 1))
+        if emoji_num > 3:
+            emoji_num = 3
+        elif emoji_num < 1:
+            emoji_num = 1
         
         if emoji_list == []:
             index = np.random.randint(len(database['random']))
