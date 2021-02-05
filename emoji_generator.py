@@ -118,10 +118,12 @@ def generate():
             output_line.append(sentence)
             continue
         word_list = []
-        for i in range(len(sentence)-1):
+        for i in range(len(sentence)):
             word_list.append(sentence[i])
-            word_list.append(sentence[i:2])
-        word_list.append(sentence[len(sentence)-1])
+        for i in range(len(sentence)-1):
+            word_list.append(sentence[i:i+2])
+        for i in range(len(sentence)-2):
+            word_list.append(sentence[i:i+3])
         
         emoji_list = []
         for word in word_list:
@@ -183,7 +185,6 @@ if __name__ == '__main__':
     right_button = tk.Button(top_frame, text='建立資料庫', font=('微軟正黑體', 12), width=30, height=4, command=build_data)
     right_button.pack(side=tk.LEFT)
     
-    
     # generator page
     generator_input = tk.Text(window)
     generator_output = tk.Text(window)
@@ -195,7 +196,7 @@ if __name__ == '__main__':
     builddata_button = tk.Button(window, text='儲存', font=('微軟正黑體', 12), command=save)
     key_label = tk.Label(window, text='關鍵字', font=('微軟正黑體', 12))
     emoji_label = tk.Label(window, text='表情', font=('微軟正黑體', 12))
-    description_label = tk.Label(window, text='*關鍵字限制一至二個字*', font=('微軟正黑體', 12))
+    description_label = tk.Label(window, text='*關鍵字限制一至三個字*', font=('微軟正黑體', 12))
     
     window.mainloop()
     
