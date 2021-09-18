@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <script src="Database.js"></script>
+    <script src="Generate.js"></script>
+    <title>複製文產生器</title>
+</head>
+<body>
+  <div id="container">
+    <h1>複製文產生器</h1>
+    <textarea id="raw_text"></textarea>
+	<form action="/action_page.php">
+		<label for="emoji_num">表情個數：</label>
+		<input type="text" id="min_emoji_num" name="min_emoji_num">
+		<label for="tilde"> ~ </label>
+		<input type="text" id="max_emoji_num" name="max_emoji_num">
+	</form>
+	
+    <button id="generate" onclick="Generate()">轉換</button>
+    <h3>結果：</h3>
+    <textarea id="result"></textarea>
+  </div>
+</body>
+
+
+</html>
